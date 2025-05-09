@@ -29,13 +29,12 @@
     <p class="mb-0"><i class="ph ph-copyright"></i> 2024 Shopblocks Dev Test</p>
 </footer>
 
-<script src="{{ asset('js/boostrap5-3.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap5.3.min.js') }}"></script>
 @stack('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const toggle = document.getElementById('darkModeToggle');
         const body = document.body;
-        const searchInput = document.getElementById('searchInput');
 
         if (localStorage.getItem('darkMode') === 'enabled') {
             enableDarkMode();
@@ -53,14 +52,12 @@
             localStorage.setItem('darkMode', 'enabled');
             body.classList.add('dark-mode');
             toggle.innerHTML = '<i class="ph-fill ph-cloud-moon"></i>';
-            searchInput.classList.add('dark-mode');
         }
 
         function disableDarkMode() {
             localStorage.setItem('darkMode', 'disabled');
             body.classList.remove('dark-mode');
             toggle.innerHTML = '<i class="ph-fill ph-sun-horizon"></i>';
-            searchInput.classList.remove('dark-mode');
         }
     });
 </script>

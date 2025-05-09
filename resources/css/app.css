@@ -22,8 +22,7 @@
     --bs-btn-disabled-border-color: var(--accent-color);
 }
 
-body, html {
-    height: 100%;
+body, html {    
     margin: 0;
     padding: 20px;
     display: flex;
@@ -113,21 +112,57 @@ body.dark-mode {
     color: var(--text-color-dark);
 }
 
-input.dark-mode {
+body.dark-mode #petList a {
+    background-color: #1e1e1e; /* dark gray */
+    color: #e0e0e0; /* light gray text */
+}
+
+body.dark-mode #petList a:hover,
+body.dark-mode #petList a:focus {
+  background-color: #333333; /* slightly lighter gray */
+  color: #ffffff; /* white text */
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+    color: #e0e0e0;    
+}
+
+body.dark-mode .card-title {
+    color: #ffffff;
+}
+
+body.dark-mode .card-text {
+    color: #dcdcdc;
+}
+
+body.dark-mode .btn-outline-secondary {
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    background-color: transparent;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #555; 
+    border-color: #555;
+}
+
+body.dark-mode input {
     border: none !important;
 }
 
-input.dark-mode, button.dark-mode {
+body.dark-mode input, body.dark-mode button.dark-mode {
     background-color: var(--secondary-bg-color-dark);
     color: var(--text-color-dark);
 }
 
-input.dark-mode::placeholder {
+body.dark-mode input::placeholder {
     color: var(--text-color-dark);
     opacity: 0.8;
 }
 
-.btn-outline-success.dark-mode:hover {
+body.dark-mode .btn-outline-success:hover {
     background-color: var(--accent-color);
     color: var(--primary-bg-color-dark);
 }
